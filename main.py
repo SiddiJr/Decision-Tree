@@ -14,9 +14,6 @@ df = df[['qualPres', 'pulso', 'resp']]
 def fitting(X, y, criterion, splitting, mdepth, pred):
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
 
-    print(X_test)
-    print(y_test)
-
     model = tree.DecisionTreeClassifier(
                                         criterion=criterion,
                                         splitter=splitting,
